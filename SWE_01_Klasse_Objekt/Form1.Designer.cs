@@ -28,9 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Button btaccelerate;
             btnShow = new Button();
             lblShow = new Label();
+            btBend = new Button();
+            btaccelerate = new Button();
             SuspendLayout();
+            // 
+            // btaccelerate
+            // 
+            btaccelerate.Location = new Point(550, 66);
+            btaccelerate.Name = "btaccelerate";
+            btaccelerate.Size = new Size(150, 46);
+            btaccelerate.TabIndex = 2;
+            btaccelerate.Text = "accelerate";
+            btaccelerate.UseVisualStyleBackColor = true;
+            btaccelerate.Click += btaccelerate_Click;
             // 
             // btnShow
             // 
@@ -51,11 +64,23 @@
             lblShow.TabIndex = 1;
             lblShow.Text = "?";
             // 
+            // btBend
+            // 
+            btBend.Location = new Point(550, 138);
+            btBend.Name = "btBend";
+            btBend.Size = new Size(150, 46);
+            btBend.TabIndex = 3;
+            btBend.Text = "bend";
+            btBend.UseVisualStyleBackColor = true;
+            btBend.Click += btBend_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1413, 825);
+            Controls.Add(btBend);
+            Controls.Add(btaccelerate);
             Controls.Add(lblShow);
             Controls.Add(btnShow);
             Name = "Form1";
@@ -68,5 +93,6 @@
 
         private Button btnShow;
         private Label lblShow;
+        private Button btBend;
     }
 }
