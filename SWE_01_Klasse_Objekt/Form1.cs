@@ -28,7 +28,7 @@ namespace SWE_01_Klasse_Objekt
 
             //das geht nicht: 
             // lblAnzeige.Text = vespa.speed;
-            lblShow.Text += "\n Geschwindigkeit:  " + vespa.Speed.ToString();
+            lblShow.Text += "\n Geschwindigkeit:  \n" + vespa.Speed.ToString();
 
         }
 
@@ -40,7 +40,24 @@ namespace SWE_01_Klasse_Objekt
         private void btBend_Click(object sender, EventArgs e)
         {
             //umbiegen
-            yamaha = honda; 
+            yamaha = honda;
+        }
+
+        private void btManyCars_Click(object sender, EventArgs e)
+        {
+            Fahrzeug[] cars = new Fahrzeug[100];  
+
+            for (int i = 0; i < cars.Length; i++)
+            {
+                cars[i] = new Fahrzeug("Auto Nr: " +i, i+10);
+            }
+            cars[7].accelerate(20);
+            cars[12].accelerate(30);
+
+            foreach(Fahrzeug fahrzeug in cars)
+            {
+                lblShow.Text += fahrzeug.ToString(); 
+            }
         }
     }
 }

@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             Button btaccelerate;
+            Button btManyCars;
             btnShow = new Button();
             lblShow = new Label();
             btBend = new Button();
             btaccelerate = new Button();
+            btManyCars = new Button();
             SuspendLayout();
             // 
             // btaccelerate
@@ -74,11 +76,22 @@
             btBend.UseVisualStyleBackColor = true;
             btBend.Click += btBend_Click;
             // 
+            // btManyCars
+            // 
+            btManyCars.Location = new Point(879, 104);
+            btManyCars.Name = "btManyCars";
+            btManyCars.Size = new Size(150, 46);
+            btManyCars.TabIndex = 4;
+            btManyCars.Text = "many cars";
+            btManyCars.UseVisualStyleBackColor = true;
+            btManyCars.Click += btManyCars_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1413, 825);
+            Controls.Add(btManyCars);
             Controls.Add(btBend);
             Controls.Add(btaccelerate);
             Controls.Add(lblShow);
