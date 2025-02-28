@@ -28,18 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
+            btnShow = new Button();
+            lblShow = new Label();
             SuspendLayout();
+            // 
+            // btnShow
+            // 
+            btnShow.Location = new Point(53, 66);
+            btnShow.Name = "btnShow";
+            btnShow.Size = new Size(363, 46);
+            btnShow.TabIndex = 0;
+            btnShow.Text = "Show";
+            btnShow.UseVisualStyleBackColor = true;
+            btnShow.Click += btnShow_Click;
+            // 
+            // lblShow
+            // 
+            lblShow.AutoSize = true;
+            lblShow.Location = new Point(215, 182);
+            lblShow.Name = "lblShow";
+            lblShow.Size = new Size(25, 32);
+            lblShow.TabIndex = 1;
+            lblShow.Text = "?";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1359, 788);
+            ClientSize = new Size(1413, 825);
+            Controls.Add(lblShow);
+            Controls.Add(btnShow);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button btnShow;
+        private Label lblShow;
     }
 }
